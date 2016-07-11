@@ -1,0 +1,38 @@
+{
+    "appenders":
+        [
+            {
+                "type":"console",
+                "category":"console"
+            },
+            {
+                "category":"get_url",
+                "type": "dateFile",
+                "filename": "./logs/error/",
+                "alwaysIncludePattern": true,
+                "pattern": "yyyy-MM-dd.log"
+            },
+            {
+                "category":"get_art",
+                "type": "dateFile",
+                "filename": "./logs/error/",
+                "alwaysIncludePattern": true,
+                "pattern": "yyyy-MM-dd.log"
+            },
+            {
+                "category":"detail",
+                "type": "dateFile",
+                "filename": "./logs/info/",
+                "alwaysIncludePattern": true,
+                "pattern": "yyyy-MM-dd.log"
+
+            }
+        ],
+    "replaceConsole": true,
+    "levels":
+    {
+        "log_file":"ALL",
+        "console":"ALL",
+        "log_date":"ALL"
+    }
+}

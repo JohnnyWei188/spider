@@ -1,0 +1,26 @@
+{
+  "name" : "spider_demo",
+  "version" : "1.0.0",
+  "description" : "baike spider",
+  "main" : "main.js",
+  "scripts" : {
+    "test" : "echo \"Error: no test specified\" && exit 1"
+  },
+  "license" : "ISC",
+  "dependencies" : {
+    "async" : "^2.0.0-rc.6",
+    "cheerio" : "^0.20.0",
+    "config" : "^1.21.0",
+    "eventproxy" : "^0.3.4",
+    "html-entities" : "^1.2.0",
+    "iconv-lite" : "^0.4.13",
+    "log" : "^1.4.0",
+    "log4js" : "^0.6.37",
+    "moment" : "^2.13.0",
+    "mysql" : "^2.11.1",
+    "node-fetch" : "^1.5.3",
+    "superagent" : "^2.0.0",
+    "superagent-charset" : "^1.1.1",
+    "t" : "^0.5.1"
+  }
+}

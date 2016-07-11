@@ -1,0 +1,128 @@
+{
+    "description": {
+        "desc" : "description对象仅做当前配置说明",
+        "siteConfig": "需要采集的相关站点的配置",
+        "artType" : "文章类型shbx 社会保险，bxyl 保险原理，tbjq投保技巧，lpzs理赔知识。对应的valu表示文章存储时对应的类型ID"
+    },
+    "debug": true,
+    "domRules": {
+        "rule1": {
+            "urlList": "[class='clearfix list_itemone'] > li",
+            "url": "a",
+            "urlDate": "span",
+            "pageLink": ".new_page_list a",
+            "lastDate": "2015-01-01",
+            "content": {
+                "title": ".pagetit",
+                "article": "#content_font"
+            }
+        },
+        "rule2": {
+            "urlList": ".news_list > li",
+            "url": ".ellipsis a",
+            "urlDate": "span[class=fr]",
+            "pageLink": ".new_page_list a",
+            "lastDate": "2015-01-01",
+            "content": {
+                "title": "[class='msg_box content'] > .ellipsis",
+                "article": ".news_detail_info"
+            }
+        },
+        "rule3": {
+            "eval": true,
+            "urlList": "$('.m_8').eq(1).find('tr:nth-child(odd)')",
+            "url": "$element.find('td').eq(0).find('a')",
+            "urlDate": "$element.find('td').eq(1)",
+            "pageLink": ".new_page_list a",
+            "lastDate": "2015-01-01", 
+            "content": {
+                "title": ".study_center_l2_2 > h1",
+                "article": "#Text_changes .tppp"
+            }
+        },
+        "rule4": {
+            "urlList": "[class='cmsNewList'] > ul > li",
+            "url": "a",
+            "urlDate": "em",
+            "pageLink": ".new_page_list a",
+            "lastDate": "2015-01-01",
+            "content": {
+                "title": "h1[class='tit']",
+                "article": "[class='con'] > p"
+            }
+        },
+        "rule5": {
+            "eval" : true,
+            "urlList": "$('.news-category-item')",
+            "url": "$element.find('a')",
+            "urlDate": "$element.find('.news-dt').find('span').eq(1)",
+            "pageLink": ".new_page_list a",
+            "lastDate": "2015-01-01",
+            "content": {
+                "title": "#idNewsTitle",
+                "article": "[class='body-container'] p"
+            }
+        },
+        "rule6": {
+            "urlList": ".InList > ul > li",
+            "url": "a",
+            "urlDate": "span",
+            "lastDate": "2015-01-01",
+            "pageLink": "",
+            "content": {
+                "title": "[class='singleTitle']",
+                "article": ".detail-sbTxt"
+            }
+        },
+        "rule7": {
+            "eval": true,
+            "urlList": "$('#gfwjcontent > table > tr').eq(1).find('table').eq(0).find('tr')", 
+            "url": "$element.find('td').eq(0).find('a')",
+            "urlDate": "$element.find('td').eq(1)",
+            "pageLink": ".new_page_list a",
+            "lastDate": "2015-01-01",
+            "content": {
+                "title": "#ivs_title span",
+                "article": "#fontzoom"
+            }
+        },
+        "rule8": {
+            "eval": true,
+            "urlList": "$('#subcontent > table > tr').eq(1).find('table').eq(0).find('tr')", 
+            "url": "$element.find('td').eq(0).find('a')",
+            "urlDate": "$element.find('td').eq(1)",
+            "pageLink": "",
+            "lastDate": "2015-01-01",
+            "content": {
+                "title": ".STYLE7",
+                "article": "#fontzoom"
+            }
+        }
+    },
+    "siteConfig": {
+        "shbx": [
+            {
+                "rule": "rule4",
+                "urls": [
+                    ["http://www.dajiabao.com/zixun/l0_{X}", 1, 250]
+                ]
+            }
+        ]
+    },
+    "artType": {
+      "shbx": 7,
+      "bxyl": 1,
+      "tbjq": 5,
+      "lpzs": 6,
+      "xzzs": 4,
+      "bxls": 8
+    },
+    "artTypeName": {
+      "shbx": "社会保险",
+      "bxyl": "保险原理",
+      "tbjq": "投保技巧",
+      "lpzs": "理赔资讯",
+      "xzzs": "险种知识",
+      "bxls": "保险历史"
+    }
+}

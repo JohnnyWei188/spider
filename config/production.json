@@ -1,0 +1,10 @@
+{
+    "dbConfig": {
+        "host"      : "",
+        "user"      : "",
+        "password"  : "",
+        "database"  : "",
+        "port"      : "3306",
+        "connectionLimit" : "20"
+    }
+}
